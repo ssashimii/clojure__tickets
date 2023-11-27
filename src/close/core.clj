@@ -31,6 +31,16 @@
 
 
 
+;; sorting function
+
+(defn sort-plans [plans]
+  (->> plans (sort-by (fn [plan] [(-> plan :total-cost -) (-> plan :flight count)]))))
+
+;; searching funct
+
+(defn find-and-sort [graph starting-mark destination-name budget max-flights]
+  (let [plans (bfs graph starting-mark destination-name budget max-flights)]
+    (sort-plans plans)))
 
 
 
