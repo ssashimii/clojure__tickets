@@ -1,32 +1,17 @@
 # Introduction
 
-this repository contains clojure code which helps company's clients to find flight tickets that meet their requirements.
+Welcome to the Clojure Tickets project repository! This project aims to create a responsive and feature-rich flight ticket search website for finding flight tickets that meet clients's requirements.
 
-## Installation
-
-Download from http://example.com/FIXME.
+## Structure
+The program suggests to the clients to be able to input your preference about flight cost, your current location, your destination location, and quantity of docks.
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar close-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
+Clone our repositiry to your computer using git clone command and run the REPL terminal. Use csv file which is in the same folder with the code. Run and follow instructions of the program.
 
 ## Examples
 
 ...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
