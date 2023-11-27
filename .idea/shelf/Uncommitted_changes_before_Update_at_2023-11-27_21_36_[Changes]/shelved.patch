@@ -1,0 +1,230 @@
+Index: .idea/libraries/Leiningen__org_clojure_clojure_1_11_1.xml
+===================================================================
+diff --git a/.idea/libraries/Leiningen__org_clojure_clojure_1_11_1.xml b/.idea/libraries/Leiningen__org_clojure_clojure_1_11_1.xml
+deleted file mode 100644
+--- a/.idea/libraries/Leiningen__org_clojure_clojure_1_11_1.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ /dev/null	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Leiningen: org.clojure/clojure:1.11.1">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.11.1/clojure-1.11.1.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_62.xml
+===================================================================
+diff --git a/.idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_62.xml b/.idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_62.xml
+deleted file mode 100644
+--- a/.idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_62.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ /dev/null	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Leiningen: org.clojure/core.specs.alpha:0.2.62">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/clojure/core.specs.alpha/0.2.62/core.specs.alpha-0.2.62.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Leiningen__org_clojure_spec_alpha_0_3_218.xml
+===================================================================
+diff --git a/.idea/libraries/Leiningen__org_clojure_spec_alpha_0_3_218.xml b/.idea/libraries/Leiningen__org_clojure_spec_alpha_0_3_218.xml
+deleted file mode 100644
+--- a/.idea/libraries/Leiningen__org_clojure_spec_alpha_0_3_218.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ /dev/null	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Leiningen: org.clojure/spec.alpha:0.3.218">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/clojure/spec.alpha/0.3.218/spec.alpha-0.3.218.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Leiningen__org_nrepl_incomplete_0_1_0.xml
+===================================================================
+diff --git a/.idea/libraries/Leiningen__org_nrepl_incomplete_0_1_0.xml b/.idea/libraries/Leiningen__org_nrepl_incomplete_0_1_0.xml
+deleted file mode 100644
+--- a/.idea/libraries/Leiningen__org_nrepl_incomplete_0_1_0.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ /dev/null	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Leiningen: org.nrepl/incomplete:0.1.0">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/nrepl/incomplete/0.1.0/incomplete-0.1.0.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Leiningen__nrepl_1_0_0.xml
+===================================================================
+diff --git a/.idea/libraries/Leiningen__nrepl_1_0_0.xml b/.idea/libraries/Leiningen__nrepl_1_0_0.xml
+deleted file mode 100644
+--- a/.idea/libraries/Leiningen__nrepl_1_0_0.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ /dev/null	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
+@@ -1,9 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Leiningen: nrepl:1.0.0">
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/nrepl/nrepl/1.0.0/nrepl-1.0.0.jar!/" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"LeiningenProjectsManager\">\r\n    <option name=\"projectFiles\">\r\n      <set>\r\n        <option value=\"file://$PROJECT_DIR$/project.clj\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"20\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ b/.idea/misc.xml	(date 1701117114364)
+@@ -1,11 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="LeiningenProjectsManager">
+-    <option name="projectFiles">
+-      <set>
+-        <option value="file://$PROJECT_DIR$/project.clj" />
+-      </set>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="20" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1701116977661)
++++ b/.idea/vcs.xml	(date 1701116977661)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0f3f4772-1f06-4897-8b23-28cd98ba5061\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\r\n  <component name=\"ProjectId\" id=\"2WvtRSTI8pz5NJ3pNncL86HccVa\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/cliff/OneDrive/Desktop/close&quot;\n  }\n}</component>\r\n  <component name=\"ReplState\" timestamp=\"1698309238847\">{:repl-history {:ide [], :local [], :remote []}}</component>\r\n  <component name=\"RunManager\" selected=\"Leiningen.run\">\r\n    <configuration default=\"true\" type=\"Babashka\" factoryName=\"BabashkaLocalRepl\" activateToolWindowBeforeRun=\"false\">\r\n      <setting name=\"displayName\" value=\"\" />\r\n      <setting name=\"bbPath\" value=\"\" />\r\n      <setting name=\"parameters\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <setting name=\"workingDir\" value=\"\" />\r\n      <setting name=\"focusEditor\" value=\"false\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"REPL\" type=\"ClojureREPL\" factoryName=\"Local\" activateToolWindowBeforeRun=\"false\">\r\n      <option name=\"configVersion\" value=\"1\" />\r\n      <option name=\"displayName\" value=\"REPL\" />\r\n      <module name=\"close\" />\r\n      <option name=\"options\" />\r\n      <option name=\"profiles\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ClojureREPL\" factoryName=\"Local\" activateToolWindowBeforeRun=\"false\">\r\n      <option name=\"configVersion\" value=\"1\" />\r\n      <option name=\"options\" />\r\n      <option name=\"profiles\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ClojureREPL\" factoryName=\"Remote\" activateToolWindowBeforeRun=\"false\">\r\n      <setting name=\"displayName\" value=\"\" />\r\n      <setting name=\"host\" value=\"\" />\r\n      <setting name=\"port\" value=\"0\" />\r\n      <setting name=\"replType\" value=\"SOCKET\" />\r\n      <setting name=\"configType\" value=\"SPECIFY\" />\r\n      <setting name=\"replPortFileType\" value=\"STANDARD\" />\r\n      <setting name=\"customPortFile\" value=\"\" />\r\n      <setting name=\"fixLineNumbers\" value=\"false\" />\r\n      <setting name=\"focusEditor\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"run\" type=\"LeiningenRunConfiguration\" factoryName=\"Leiningen\">\r\n      <option name=\"execution\" value=\"LEININGEN\" />\r\n      <module name=\"close\" />\r\n      <option name=\"options\" />\r\n      <option name=\"profiles\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"run\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Clojure REPL.REPL\" />\r\n      <item itemvalue=\"Leiningen.run\" />\r\n    </list>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0f3f4772-1f06-4897-8b23-28cd98ba5061\" name=\"Changes\" comment=\"\" />\r\n      <created>1697624873656</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1697624873656</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 47b6e6d64131df3e5a84f3e9e570710da184d79c)
++++ b/.idea/workspace.xml	(date 1701117235199)
+@@ -4,11 +4,22 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0f3f4772-1f06-4897-8b23-28cd98ba5061" name="Changes" comment="" />
++    <list default="true" id="0f3f4772-1f06-4897-8b23-28cd98ba5061" name="Changes" comment="Edit csv file">
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__nrepl_1_0_0.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_clojure_1_11_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_specs_alpha_0_2_62.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_spec_alpha_0_3_218.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_nrepl_incomplete_0_1_0.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -17,17 +28,26 @@
+   &quot;associatedIndex&quot;: 0
+ }</component>
+   <component name="ProjectId" id="2WvtRSTI8pz5NJ3pNncL86HccVa" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cliff/OneDrive/Desktop/close&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "main",
++    "last_opened_file_path": "C:/Users/cliff/OneDrive/Desktop/close",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="ReplState" timestamp="1698309238847">{:repl-history {:ide [], :local [], :remote []}}</component>
+   <component name="RunManager" selected="Leiningen.run">
+     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+@@ -90,7 +110,35 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1697624873656</updated>
++      <workItem from="1701116932968" duration="300000" />
+     </task>
++    <task id="LOCAL-00001" summary="Edit csv file">
++      <option name="closed" value="true" />
++      <created>1701117215639</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1701117215639</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Edit csv file" />
++    <option name="LAST_COMMIT_MESSAGE" value="Edit csv file" />
++  </component>
+ </project>
+\ No newline at end of file
