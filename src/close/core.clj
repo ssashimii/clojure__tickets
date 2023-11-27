@@ -201,3 +201,30 @@
   ;; Define settings for different groups ("f" for Families, "g" for Organized tours)
   {"f" {:budget 700 :max-flights 3 :max-connections 2}
    "g" {:budget 1000 :max-flights 4 :max-connections 3}})
+
+(defn input [graph]
+  ;; Prompt the user to enter departure city, destination city, and group type
+  (let [departure (choose-city "Enter departure city: " graph)
+        destination (choose-city "Enter destination city:" graph)
+        group-type (do (println "Enter group type (f(Families) or g(Organized tours)):")
+                       (clojure.string/lower-case (read-line)))]
+    (if-let [settings (get group-settings group-type)]
+      (let [budget (:budget settings)
+            max-connections (:max-connections settings)]
+        [departure destination budget max-connections])
+      (do (println "Invalid group type. Please enter 'f' or 'g'.")
+          (recur graph)))))
+
+(defn main [g]
+  ;; Get user inputs, calculate max flights, find and sort travel plans, and display results
+  (let [[departure destination budget max-connections] (input g)
+        max-flights (inc max-connections)
+        plans (find-and-sort g departure destination budget max-flights)]
+    (println (str "Finding travel plans from " departure " to " destination
+                  " for no more than $" budget
+                  " and a maximum of " max-flights " flights:"))
+    (if (nil? (first plans))
+      (println "No valid travel plans found.")
+      (print-plans plans))))
+
+(main g)
