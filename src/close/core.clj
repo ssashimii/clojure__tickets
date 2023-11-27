@@ -180,3 +180,24 @@
     (let [{:keys [flight total-cost]} plan
           output-format (output flight)] ;; Generate the output format for the flight plan using the 'output' function.
       (print-ticket output-format total-cost (count flight))))) ;; Print the flight plan with its output format and total cost.
+
+(defn get-cities [graph];retrieves the list of cities from a graph
+  (keys @(:vertices graph)));Return keys of vertices map in the graph
+
+(defn choose-city [chosen graph];;prompts the user to choose a city from a list
+  (let [cities (get-cities graph)];retrieve list of cities from graph
+    (println chosen)
+    (doseq [[city base] (map vector (range 1 (inc (count cities))) cities)]
+      (println (str city ". " base)));print numbered list of cities
+    (let [choice-str (read-line);Read user input for city choice
+          choice (if (re-matches #"\d+" choice-str) (Integer/parseInt choice-str) 0)];Parse the user's choice
+      (if (and (>= choice 1) (<= choice (count cities)));Check if the choice is valid
+        (nth cities (dec choice));Return the chosen city
+        (do
+          (println "Selected option is invalid, try again.");Repeat the process until a valid choice is made
+          (recur chosen graph))))))
+
+(def group-settings
+  ;; Define settings for different groups ("f" for Families, "g" for Organized tours)
+  {"f" {:budget 700 :max-flights 3 :max-connections 2}
+   "g" {:budget 1000 :max-flights 4 :max-connections 3}})
