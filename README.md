@@ -7,7 +7,7 @@ The program suggests to the clients to be able to input your preference about fl
 
 ## Usage
 
-Clone our repositiry to your computer using git clone command and run the REPL terminal. Use csv file which is in the same folder with the code. Run and follow instructions of the program.
+Clone our repositiry to your computer using git clone command and run the REPL terminal. Use csv file which is in the same folder with the code. Run the code and follow instructions of the program.
 
 ## Examples
 
