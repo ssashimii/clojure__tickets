@@ -163,4 +163,20 @@
             new-cost (if prev (+ (:cost prev) (:cost current)) (:cost current))] ;; Calculate the new cost for the current flight segment.
         (recur current (rest remainder) (conj result (assoc current :cost new-cost))))))) ;; Recur with updated values, removing the processed segment and adding it to 'result'.
 
+(defn print-ticket [output-format total-cost flights]
+  (let [data [(str "Travel Plan: " output-format)
+              (str (- flights 1) " connected flights");prints formatted information about a flight plan
+              (str "Total Cost: $" total-cost)]
+        maximum (apply max (map count data))];determine maximum length among the lines of information
+    (doseq [i (range (count data))]
+      (let [info-line (nth data i nil)]
+        (println (if info-line
+                   (str "~ " info-line (apply str (repeat (- maximum (count info-line)) " ")))
+                   (apply str (repeat maximum " "))))));print separator lines or spaces as needed
+    (println)));extra lines for better readability
 
+(defn print-plans [plans]
+  (doseq [plan plans]
+    (let [{:keys [flight total-cost]} plan
+          output-format (output flight)] ;; Generate the output format for the flight plan using the 'output' function.
+      (print-ticket output-format total-cost (count flight))))) ;; Print the flight plan with its output format and total cost.
