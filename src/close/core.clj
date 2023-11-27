@@ -43,5 +43,40 @@
     (sort-plans plans)))
 
 
+;; filtering duplicates function
+
+(defn remove-duplicates [plans];;filters out duplicates based on number of flights
+  (let [seen-flights (atom #{})]
+    (filter (fn [plan]
+              (let [num-flights (- (count (:flight plan)) 1)]
+                (if (contains? @seen-flights num-flights);Creates a set to track number of flights already seen
+                  false
+                  (do;Checks if  number of flights has been seen before
+                    (swap! seen-flights conj num-flights);Adds the number of flights to set of seen flights
+                    true))));Return filtered list of flight plans
+            plans)))
+
+(defn output [flight]
+  (->> flight
+       (map-indexed (fn [idx {:keys [city cost]}]
+                      (if (zero? idx) ;; Check if it's the first item in the flight list.
+                        city ;; If it's the first item, return just the city name.
+                        (str city " (" cost ")")))) ;; For subsequent items, format as "city (cost)".
+       (clojure.string/join " to "))) ;; Join the formatted items with " to " in between.
+
+
+
+
+;; flipping function
+
+(defn flip-costs [flight]
+  (loop [prev nil ;; Initialize 'prev' to nil, which holds the previous flight segment.
+         remainder flight ;; Initialize 'remainder' to the input flight list.
+         result []]
+    (if (empty? remainder) ;; Check if the 'remainder' flight list is empty.
+      (reverse result) ;; If it's empty, reverse the 'result' list and return it as the final output.
+      (let [current (first remainder) ;; Get the first flight segment from 'remainder'.
+            new-cost (if prev (+ (:cost prev) (:cost current)) (:cost current))] ;; Calculate the new cost for the current flight segment.
+        (recur current (rest remainder) (conj result (assoc current :cost new-cost))))))) ;; Recur with updated values, removing the processed segment and adding it to 'result'.
 
 
