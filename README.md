@@ -1,32 +1,32 @@
-# Introduction
+# clojure_airlines
 
-Welcome to the Clojure Tickets project repository! This project aims to create a responsive and feature-rich flight ticket search website for finding flight tickets that meet clients's requirements.
+FIXME: description
 
-## Overview
-This Clojure program is designed to serve as a flight ticket search engine for a travel agency. It caters to two types of clients: families planning resort trips and organized tours to cities with landmarks. The goal is to provide users with various travel plans that fit their criteria, considering factors such as budget, number of connecting flights, and type of destination.
+## Installation
+
+Download from http://example.com/FIXME.
 
 ## Usage
 
-* Clone the repository to your local machine.
-* Ensure you have Clojure installed.
-* Run the program using a Clojure REPL or your preferred Clojure development environment.
-* Usage
-* Launch the program.
-* Input your travel details, including type of travel, number of people, departure city, and destination city.
-* Receive a list of travel plans sorted by total price in descending order.
-* Refine your search using filters for budget and maximum connecting flights.
-* Click on a travel plan to view more detailed information.
-* Adjust your search criteria dynamically and receive updated results.
+FIXME: explanation
+
+    $ java -jar clojure_airlines-0.1.0-standalone.jar [args]
+
+## Options
+
+FIXME: listing of options this app accepts.
 
 ## Examples
-* Search for flight tickets based on type of travel, number of people, departure city, and destination city.
-* Filter travel plans by budget and maximum connecting flights.
-* View detailed information for each travel plan, including individual flight details.
-* Receive dynamic updates as you adjust search criteria.
-* Compare travel plans, reset search criteria, and save favorite plans.
 
-## Error Handling
-The program handles errors gracefully, providing informative error messages in case of invalid input or no available travel plans.
+...
+
+### Bugs
+
+...
+
+### Any Other Sections
+### That You Think
+### Might be Useful
 
 ## License
 
@@ -38,3 +38,7 @@ http://www.eclipse.org/legal/epl-2.0.
 
 This Source Code may also be made available under the following Secondary
 Licenses when the conditions for such availability set forth in the Eclipse
+Public License, v. 2.0 are satisfied: GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or (at your
+option) any later version, with the GNU Classpath Exception which is available
+at https://www.gnu.org/software/classpath/license.html.
