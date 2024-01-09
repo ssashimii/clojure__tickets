@@ -1,4 +1,4 @@
-(ns clojure-airlines.broker.broker
+(ns clojure_airlines.broker.broker
   (:require [clojure.java.io :as io]))
 
 (defn read_data [full_path]

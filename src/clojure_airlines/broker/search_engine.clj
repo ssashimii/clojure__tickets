@@ -1,4 +1,4 @@
-(ns clojure-airlines.broker.search-engine)
+(ns clojure_airlines.broker.search-engine)
 
 (defn prepare_travel_plan
   [departure_city destination_city people]
