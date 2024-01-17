@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983558f5-378a-4636-ae96-95e4d3289fb1" name="Changes" comment="Fixed error for required files.">
+    <list default="true" id="983558f5-378a-4636-ae96-95e4d3289fb1" name="Changes" comment="Merged required data by 2 groups(family and organized tours)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/clojure_airlines/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/clojure_airlines/core.clj" afterDir="false" />
     </list>
@@ -43,7 +43,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="ReplState" timestamp="1705451762941">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1705452191120">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -132,7 +132,7 @@
       <workItem from="1701635683839" duration="1664000" />
       <workItem from="1704828792076" duration="1956000" />
       <workItem from="1705412945660" duration="4028000" />
-      <workItem from="1705418834927" duration="27951000" />
+      <workItem from="1705418834927" duration="28376000" />
     </task>
     <task id="LOCAL-00001" summary="update clojure csv version">
       <option name="closed" value="true" />
@@ -174,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704829793994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add required csv file">
+      <option name="closed" value="true" />
+      <created>1705451934805</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705451934805</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merged required data by 2 groups(family and organized tours)">
+      <option name="closed" value="true" />
+      <created>1705452153241</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705452153241</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +225,9 @@
     <MESSAGE value="Upload required broker application (broker.clj) and broker_team_4.csv" />
     <MESSAGE value="Upload required search_engine.clj and sales_routine.clj" />
     <MESSAGE value="Fixed error for required files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error for required files." />
+    <MESSAGE value="Add required csv file" />
+    <MESSAGE value="Merged required data by 2 groups(family and organized tours)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged required data by 2 groups(family and organized tours)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

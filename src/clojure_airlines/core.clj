@@ -219,6 +219,8 @@
 ;(main g)
 
 (def sales-data (fetch-csv "src/clojure_airlines/sales_team_4.csv"))
+
+;;Split a full name into first name and last name
 (defn split-name [name]
   (let [parts (str/split name #" ")]
     (if (= (count parts) 2)
@@ -227,6 +229,7 @@
       {:first-name name
        :last-name nil})))
 
+;;Transform raw sales data into a structured format
 (defn change-sales-data [data]
   (let [header (first data)
         rows (rest data)
@@ -241,6 +244,7 @@
                             :paid (nth row 4)}))]
     processed-data))
 
+;; Transform the sales data into a structured format and store it in processed-sales-data
 (def processed-sales-data (change-sales-data sales-data))
 
 ; Print data to check
