@@ -1,6 +1,7 @@
 (ns clojure_airlines.core
   (:require [clojure.data.csv :as csv];;Importing libraries for handling CSV data and file I/O
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [clojure.string :as str]))
 
 (defrecord graph[vertices edges])
 ;;Define record named 'graph' with fields 'vertices' and 'edges'
@@ -42,6 +43,7 @@
 
 (def cities-file (fetch-csv "src/clojure_airlines/flight_countries.csv"))
 ;;load CSV data from csv into 'cities-file'
+
 (def g (make-graph));;Create empty graph 'g'
 
 (defn csv-graph [cities-file g];;populates graph with vertices and edges based on CSV data
@@ -148,70 +150,162 @@
             new-cost (if prev (+ (:cost prev) (:cost current)) (:cost current))] ;; Calculate the new cost for the current flight segment.
         (recur current (rest remainder) (conj result (assoc current :cost new-cost))))))) ;; Recur with updated values, removing the processed segment and adding it to 'result'.
 
+;
+;(defn print-ticket [output-format total-cost flights]
+;  (let [data [(str "Travel Plan: " output-format)
+;              (str (- flights 1) " connected flights");prints formatted information about a flight plan
+;              (str "Total Cost: $" total-cost)]
+;        maximum (apply max (map count data))];determine maximum length among the lines of information
+;    (doseq [i (range (count data))]
+;      (let [info-line (nth data i nil)]
+;        (println (if info-line
+;                   (str "~ " info-line (apply str (repeat (- maximum (count info-line)) " ")))
+;                   (apply str (repeat maximum " "))))));print separator lines or spaces as needed
+;    (println)));extra lines for better readability
 
-(defn print-ticket [output-format total-cost flights]
-  (let [data [(str "Travel Plan: " output-format)
-              (str (- flights 1) " connected flights");prints formatted information about a flight plan
-              (str "Total Cost: $" total-cost)]
-        maximum (apply max (map count data))];determine maximum length among the lines of information
-    (doseq [i (range (count data))]
-      (let [info-line (nth data i nil)]
-        (println (if info-line
-                   (str "~ " info-line (apply str (repeat (- maximum (count info-line)) " ")))
-                   (apply str (repeat maximum " "))))));print separator lines or spaces as needed
-    (println)));extra lines for better readability
 
+;(defn print-plans [plans]
+;  (doseq [plan plans]
+;    (let [{:keys [flight total-cost]} plan
+;          output-format (output flight)] ;; Generate the output format for the flight plan using the 'output' function.
+;      (print-ticket output-format total-cost (count flight))))) ;; Print the flight plan with its output format and total cost.
+;
+;(defn get-cities [graph];retrieves the list of cities from a graph
+;  (keys @(:vertices graph)));Return keys of vertices map in the graph
+;
+;(defn choose-city [chosen graph];;prompts the user to choose a city from a list
+;  (let [cities (get-cities graph)];retrieve list of cities from graph
+;    (println chosen)
+;    (doseq [[city base] (map vector (range 1 (inc (count cities))) cities)]
+;      (println (str city ". " base)));print numbered list of cities
+;    (let [choice-str (read-line);Read user input for city choice
+;          choice (if (re-matches #"\d+" choice-str) (Integer/parseInt choice-str) 0)];Parse the user's choice
+;      (if (and (>= choice 1) (<= choice (count cities)));Check if the choice is valid
+;        (nth cities (dec choice));Return the chosen city
+;        (do
+;          (println "Selected option is invalid, try again.");Repeat the process until a valid choice is made
+;          (recur chosen graph))))))
+;
+;(def group-settings
+;  ;; Define settings for different groups ("f" for Families, "g" for Organized tours)
+;  {"f" {:budget 700 :max-flights 3 :max-connections 2}
+;   "g" {:budget 1000 :max-flights 4 :max-connections 3}})
+;
+;(defn input [graph]
+;  ;; Prompt the user to enter departure city, destination city, and group type
+;  (let [departure (choose-city "Enter departure city: " graph)
+;        destination (choose-city "Enter destination city:" graph)
+;        group-type (do (println "Enter group type (f(Families) or g(Organized tours)):")
+;                       (clojure.string/lower-case (read-line)))]
+;    (if-let [settings (get group-settings group-type)]
+;      (let [budget (:budget settings)
+;            max-connections (:max-connections settings)]
+;        [departure destination budget max-connections])
+;      (do (println "Invalid group type. Please enter 'f' or 'g'.")
+;          (recur graph)))))
+;
+;(defn main [g]
+;  ;; Get user inputs, calculate max flights, find and sort travel plans, and display results
+;  (let [[departure destination budget max-connections] (input g)
+;        max-flights (inc max-connections)
+;        plans (find-and-sort g departure destination budget max-flights)]
+;    (println (str "Finding travel plans from " departure " to " destination
+;                  " for no more than $" budget
+;                  " and a maximum of " max-flights " flights:"))
+;    (if (nil? (first plans))
+;      (println "No valid travel plans found.")
+;      (print-plans plans))))
+;
+;(main g)
 
-(defn print-plans [plans]
-  (doseq [plan plans]
-    (let [{:keys [flight total-cost]} plan
-          output-format (output flight)] ;; Generate the output format for the flight plan using the 'output' function.
-      (print-ticket output-format total-cost (count flight))))) ;; Print the flight plan with its output format and total cost.
+(def sales-data (fetch-csv "src/clojure_airlines/sales_team_4.csv"))
+(defn split-name [name]
+  (let [parts (str/split name #" ")]
+    (if (= (count parts) 2)
+      {:first-name (first parts)
+       :last-name (second parts)}
+      {:first-name name
+       :last-name nil})))
 
-(defn get-cities [graph];retrieves the list of cities from a graph
-  (keys @(:vertices graph)));Return keys of vertices map in the graph
+(defn change-sales-data [data]
+  (let [header (first data)
+        rows (rest data)
+        processed-data (for [row rows]
+                         (let [name (nth row 0)
+                               split-name (split-name name)]
+                           {:first-name (:first-name split-name)
+                            :last-name (:last-name split-name)
+                            :yob (nth row 1)
+                            :departure (nth row 2)
+                            :destination (nth row 3)
+                            :paid (nth row 4)}))]
+    processed-data))
 
-(defn choose-city [chosen graph];;prompts the user to choose a city from a list
-  (let [cities (get-cities graph)];retrieve list of cities from graph
-    (println chosen)
-    (doseq [[city base] (map vector (range 1 (inc (count cities))) cities)]
-      (println (str city ". " base)));print numbered list of cities
-    (let [choice-str (read-line);Read user input for city choice
-          choice (if (re-matches #"\d+" choice-str) (Integer/parseInt choice-str) 0)];Parse the user's choice
-      (if (and (>= choice 1) (<= choice (count cities)));Check if the choice is valid
-        (nth cities (dec choice));Return the chosen city
-        (do
-          (println "Selected option is invalid, try again.");Repeat the process until a valid choice is made
-          (recur chosen graph))))))
+(def processed-sales-data (change-sales-data sales-data))
 
-(def group-settings
-  ;; Define settings for different groups ("f" for Families, "g" for Organized tours)
-  {"f" {:budget 700 :max-flights 3 :max-connections 2}
-   "g" {:budget 1000 :max-flights 4 :max-connections 3}})
+; Print data to check
+;(doseq [row processed-sales-data]
+;  (println "First Name:" (:first-name row))
+;  (println "Last Name:" (:last-name row))
+;  (println "YOB:" (:yob row))
+;  (println "Departure:" (:departure row))
+;  (println "Destination:" (:destination row))
+;  (println "Paid:" (:paid row))
+;  (println))
 
-(defn input [graph]
-  ;; Prompt the user to enter departure city, destination city, and group type
-  (let [departure (choose-city "Enter departure city: " graph)
-        destination (choose-city "Enter destination city:" graph)
-        group-type (do (println "Enter group type (f(Families) or g(Organized tours)):")
-                       (clojure.string/lower-case (read-line)))]
-    (if-let [settings (get group-settings group-type)]
-      (let [budget (:budget settings)
-            max-connections (:max-connections settings)]
-        [departure destination budget max-connections])
-      (do (println "Invalid group type. Please enter 'f' or 'g'.")
-          (recur graph)))))
+;; Grouping criteria setting function
+(defn group-by-criteria [data]
+  (group-by #(select-keys % [:last-name :departure :destination :paid]) data))
 
-(defn main [g]
-  ;; Get user inputs, calculate max flights, find and sort travel plans, and display results
-  (let [[departure destination budget max-connections] (input g)
-        max-flights (inc max-connections)
-        plans (find-and-sort g departure destination budget max-flights)]
-    (println (str "Finding travel plans from " departure " to " destination
-                  " for no more than $" budget
-                  " and a maximum of " max-flights " flights:"))
-    (if (nil? (first plans))
-      (println "No valid travel plans found.")
-      (print-plans plans))))
+;;Calculate the age of a member
+(defn calculate-age [year-of-birth current-year]
+  (let [year-of-birth-num (if (string? year-of-birth)
+                            (Integer/parseInt year-of-birth)
+                            year-of-birth)]
+    (- current-year year-of-birth-num)))
 
-(main g)
+;; Family group verification function
+(defn valid-family-group? [group current-year]
+  (let [ages (map #(calculate-age (:yob %) current-year) group)
+        adult-present? (some #(>= 18 %) ages)  ; Confirmation of at least one adult
+        child-present? (some #(< % 18) ages)] ; Confirmation of at least one child
+    (boolean (and adult-present? child-present?)))) ; Convert result to boolean
+
+;; Define a function to group elements based on departure, destination, and payment
+(defn group-by-departure-destination-paid [group]
+  (group-by (fn [[_ data]] (select-keys data [:departure :destination :paid])) group))
+
+;; Process and group data based on criteria
+(defn process-and-group-data [data current-year]
+  (let [grouped-data (group-by-criteria data) ;; Group data using a custom function
+        family-groups (filter #(valid-family-group? (second %) current-year) grouped-data) ;; Filter family groups
+        organized-tours (filter #(not (valid-family-group? (second %) current-year)) grouped-data) ;; Filter organized tours
+        grouped-family-groups (group-by-departure-destination-paid family-groups) ;; Group family groups by departure, destination, and payment
+        grouped-organized-tours (group-by-departure-destination-paid organized-tours)] ;; Group organized tours by departure, destination, and payment
+    {:Family-groups grouped-family-groups ;; Return a map with grouped family data
+     :Organized-tours grouped-organized-tours}))
+
+;;Print data to check if it is correct.
+;(defn print-group-details [group-name group]
+;  (doseq [[key group-data] group]
+;    (println (str "Group: " group-name))
+;    (println (str "Number of Members: " (count group-data)))
+;    (println (str "  Departure: " (key :departure)))
+;    (println (str "  Destination: " (key :destination)))
+;    (println (str "  Paid: " (key :paid)))
+;    (println)))
+;
+;(defn process-and-print-data [data current-year]
+;  (let [grouped-data (group-by-criteria data)
+;        family-groups (filter #(valid-family-group? (second %) current-year) grouped-data)
+;        organized-tours (filter #(not (valid-family-group? (second %) current-year)) grouped-data)
+;        grouped-family-groups (group-by-departure-destination-paid family-groups)
+;        grouped-organized-tours (group-by-departure-destination-paid organized-tours)]
+;    (println "Family Groups:")
+;    (doseq [group (vals grouped-family-groups)]
+;      (print-group-details "Family group" group))
+;    (println "Organized Tours:")
+;    (doseq [group (vals grouped-organized-tours)]
+;      (print-group-details "Organized tour" group))))
+;
+;(process-and-print-data processed-sales-data 2024)
