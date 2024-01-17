@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983558f5-378a-4636-ae96-95e4d3289fb1" name="Changes" comment="Merged required data by 2 groups(family and organized tours)">
+    <list default="true" id="983558f5-378a-4636-ae96-95e4d3289fb1" name="Changes" comment="Write additional comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/clojure_airlines/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/clojure_airlines/core.clj" afterDir="false" />
     </list>
@@ -27,23 +27,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Soojin/Project/clojure__tickets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Soojin/Project/clojure__tickets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="ReplState" timestamp="1705452191120">{:repl-history {:ide [], :local [], :remote []}}</component>
+}</component>
+  <component name="ReplState" timestamp="1705497592160">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager" selected="Clojure REPL.REPL">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
@@ -132,7 +132,8 @@
       <workItem from="1701635683839" duration="1664000" />
       <workItem from="1704828792076" duration="1956000" />
       <workItem from="1705412945660" duration="4028000" />
-      <workItem from="1705418834927" duration="28376000" />
+      <workItem from="1705418834927" duration="30965000" />
+      <workItem from="1705494507847" duration="2782000" />
     </task>
     <task id="LOCAL-00001" summary="update clojure csv version">
       <option name="closed" value="true" />
@@ -190,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705452153241</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Write additional comments">
+      <option name="closed" value="true" />
+      <created>1705452284039</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705452284039</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +236,8 @@
     <MESSAGE value="Fixed error for required files." />
     <MESSAGE value="Add required csv file" />
     <MESSAGE value="Merged required data by 2 groups(family and organized tours)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged required data by 2 groups(family and organized tours)" />
+    <MESSAGE value="Write additional comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write additional comments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

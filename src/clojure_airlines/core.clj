@@ -258,8 +258,10 @@
 ;  (println))
 
 ;; Grouping criteria setting function
-(defn group-by-criteria [data]
-  (group-by #(select-keys % [:last-name :departure :destination :paid]) data))
+(defn group-by-criteria [data include-last-name?]
+  (group-by #(select-keys % (if include-last-name?
+                              [:last-name :departure :destination :paid] ;if it is true
+                              [:departure :destination :paid])) data)) ;if it is false
 
 ;;Calculate the age of a member
 (defn calculate-age [year-of-birth current-year]
@@ -281,15 +283,18 @@
 
 ;; Process and group data based on criteria
 (defn process-and-group-data [data current-year]
-  (let [grouped-data (group-by-criteria data) ;; Group data using a custom function
-        family-groups (filter #(valid-family-group? (second %) current-year) grouped-data) ;; Filter family groups
-        organized-tours (filter #(not (valid-family-group? (second %) current-year)) grouped-data) ;; Filter organized tours
-        grouped-family-groups (group-by-departure-destination-paid family-groups) ;; Group family groups by departure, destination, and payment
-        grouped-organized-tours (group-by-departure-destination-paid organized-tours)] ;; Group organized tours by departure, destination, and payment
-    {:Family-groups grouped-family-groups ;; Return a map with grouped family data
-     :Organized-tours grouped-organized-tours}))
+  (let [family-data (group-by-criteria data true) ;; include last name data in family group
+        tour-data (group-by-criteria data false) ;; exclude last name data in organized tour group
+        family-groups (filter #(valid-family-group? (second %) current-year) family-data) ;; filter family group
+        organized-tours (filter #(not (valid-family-group? (second %) current-year)) tour-data) ;; filter organized tour group
+        grouped-family-groups (group-by-departure-destination-paid family-groups) ;; grouped family group
+        grouped-organized-tours (group-by-departure-destination-paid organized-tours)] ;; grouped organized tour group
+    {:Family-groups grouped-family-groups ;; return family group data
+     :Organized-tours grouped-organized-tours})) ;; return organized tour data
 
-;;Print data to check if it is correct.
+println(println (process-and-group-data processed-sales-data 2024))
+;
+;Print data to check if it is correct.
 ;(defn print-group-details [group-name group]
 ;  (doseq [[key group-data] group]
 ;    (println (str "Group: " group-name))
@@ -300,9 +305,10 @@
 ;    (println)))
 ;
 ;(defn process-and-print-data [data current-year]
-;  (let [grouped-data (group-by-criteria data)
-;        family-groups (filter #(valid-family-group? (second %) current-year) grouped-data)
-;        organized-tours (filter #(not (valid-family-group? (second %) current-year)) grouped-data)
+;  (let [family-data (group-by-criteria data true)
+;        tour-data (group-by-criteria data false)
+;        family-groups (filter #(valid-family-group? (second %) current-year) family-data)
+;        organized-tours (filter #(not (valid-family-group? (second %) current-year)) tour-data)
 ;        grouped-family-groups (group-by-departure-destination-paid family-groups)
 ;        grouped-organized-tours (group-by-departure-destination-paid organized-tours)]
 ;    (println "Family Groups:")
