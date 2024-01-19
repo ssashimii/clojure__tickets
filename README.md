@@ -11,8 +11,6 @@ Clone our repositiry to your computer using git clone command and run the REPL t
 * Clone the repository to your local machine.
 * Ensure you have Clojure installed.
 * Run the program using a Clojure REPL or your preferred Clojure development environment.
-* Usage
-* Launch the program.
 * Input your travel details, including type of travel, number of people, departure city, and destination city.
 * Receive a list of travel plans sorted by total price in descending order.
 * Refine your search using filters for budget and maximum connecting flights.
@@ -22,9 +20,9 @@ Clone our repositiry to your computer using git clone command and run the REPL t
 ## Examples
 
 ...
-* Search for flight tickets based on type of travel, number of people, departure city, and destination city.
-* Filter travel plans by budget and maximum connecting flights.
-* View detailed information for each travel plan, including individual flight details.
+1. Search tickets for spesific group/family (their names, surnames and YOB)
+2. Get output as: budget for the flight for the most expensive tickets, the cheapest ticket and average ticket price.
+
 * Receive dynamic updates as you adjust search criteria.
 * Compare travel plans, reset search criteria, and save favorite plans.
 
