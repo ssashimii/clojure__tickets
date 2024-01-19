@@ -1,7 +1,7 @@
 Welcome to the Clojure Tickets project repository! This project aims to create a responsive and feature-rich flight ticket search website for finding flight tickets that meet clients's requirements.
 
 ## Structure
-The program suggests to the clients to be able to input your preference about flight cost, your current location, your destination location, and quantity of docks.
+The program suggests airplane tickets depending on people group type.
 ## Overview
 This Clojure program is designed to serve as a flight ticket search engine for a travel agency. It caters to two types of clients: families planning resort trips and organized tours to cities with landmarks. The goal is to provide users with various travel plans that fit their criteria, considering factors such as budget, number of connecting flights, and type of destination.
 
